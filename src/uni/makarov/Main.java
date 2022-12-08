@@ -87,6 +87,8 @@ public class Main {
             formatter.format("%d\n", alphabet.length);
             formatter.format("%d\n", states.length);
 
+            formatter.format("%d\n", startState);
+
             // accept states
             ArrayList<Integer> acceptable = new ArrayList<Integer>(acceptStates);
             Collections.sort(acceptable);
@@ -114,7 +116,7 @@ public class Main {
         public void minimize() {
 
             D = new boolean[states.length][states.length];
-            S = new ArrayList<ArrayList<HashSet<Point>>>();  // lol
+            S = new ArrayList<ArrayList<HashSet<Point>>>();
 
             for (int i = 0; i < states.length; i++) {
                 ArrayList<HashSet<Point>> innerList = new ArrayList<HashSet<Point>>();
